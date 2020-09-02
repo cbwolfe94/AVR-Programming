@@ -1,0 +1,10 @@
+
+
+
+def verifyInternetConnection():
+
+
+
+def verifyJSONlLink():
+
+    
