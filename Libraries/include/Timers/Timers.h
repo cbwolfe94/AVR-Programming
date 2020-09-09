@@ -1,11 +1,9 @@
+#include <stdint.h>
 
 
 
+void initFastPWM8Bit0(uint8_t prescaler, uint8_t dutyCycleA, uint8_t dutyCycleB);
 
+void initFastPWM16Bit(uint8_t prescaler, uint8_t dutyCycleA, uint8_t dutyCycleB);
 
-
-void initFastPWM0(int);
-
-void initFastPWM1(int);
-
-void initFastPWM2(int);
+void initFastPWM8Bit1(uint8_t prescaler, uint8_t dutyCycleA, uint8_t dutyCycleB);
