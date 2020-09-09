@@ -8,18 +8,21 @@ EFUSE = 0x07
 
 FUSES = -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m -U efuse:w:$(EFUSE):m
 
-SOURCES = $(wildcard *.c)
+TIMERLIBDIR = ../../../../Libraries/include/Timers
+
+SOURCES = $(wildcard *.c) $(wildcard $(TIMERLIBDIR)/*.c)
 OBJECTS = $(SOURCES:.c=.o)
 HEADERS = $(SOURCES:.c=.h)
 
 CC = avr-gcc
-CFLAGS = -Wall -Os -I
+CFLAGS = -Wall -Os -I$(TIMERLIBDIR)
 OBJCOPY = avr-objcopy
 OBJDUMP = avr-objdump
 AVRSIZE = avr-size
 AVRDUDE = avrdude -c $(PROGRAMMER_TYPE) -p $(MCU) 
 TARGET_ARCH = -mmcu=$(MCU)
 TARGET = main
+
 
 COMPILE = $(CC) $(CFLAGS) -DF_CPU=$(F_CPU) $(TARGET_ARCH)
 

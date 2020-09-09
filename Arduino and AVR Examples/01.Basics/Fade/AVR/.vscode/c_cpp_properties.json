@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\WinAVR-20100110\\avr\\include",
-                ""
+                "C:\\Users\\00007186\\Documents\\Projects\\AVR_Stuff\\AVR-Programming\\Libraries\\include\\Timers"
             ],
             "defines": [
                 "_DEBUG",
